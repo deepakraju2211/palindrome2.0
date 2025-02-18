@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <style>
+        #btn{
+            background-color: blueviolet;
+            padding: 5px;
+            margin-left: 70px;
+       
+        }
+        #frm{
+            padding: 250px;
+        }
+        
+        *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color:pink;
+}
+    </style>
+</head>
+<body>
+ <form action="" id="frm">
+  <h2>palindrome checker</h2>
+  <h4>A palindrome is Word or phrase that reads the ways either
+    <br> forwards  or backwards</h4>
+  <input type="text" placeholder="Enter the text" size="50px" id="itp"><br>
+
+  <button id="btn" onclick="func1()">check palindrome</button>
+  <p id="para"></p>
+ </form>
+ <script>
+    function func1(){
+        let str=document.getElementById(`itp`)
+        const strRev=str.split('').reverse().join('')
+      document.write(strRev);
+
+      if(str===strRev){
+
+        document.getElementById('para').innerHTML="it is a palindrome"
+        
+        }
+    else{
+        document.getElementById('para').innerHTML="it is not a palindrome"
+    
+     }
+    }
+ </script>
+</body>
+</html>
+
